@@ -4,7 +4,7 @@ steps:
       [
         "build",
         "-t",
-        "southamerica-west1-docker.pkg.dev/store-nestjs-ms-454717/image-registry/auth-ms",
+        "southamerica-west1-docker.pkg.dev/store-nestjs-ms-454717/image-registry/client-gateway",
         "-f",
         "dockerfile.prod",
         "--platform=linux/amd64",
@@ -14,7 +14,7 @@ steps:
     args:
       [
         "push",
-        "southamerica-west1-docker.pkg.dev/store-nestjs-ms-454717/image-registry/auth-ms",
+        "southamerica-west1-docker.pkg.dev/store-nestjs-ms-454717/image-registry/client-gateway",
       ]
 options:
   logging: CLOUD_LOGGING_ONLY
