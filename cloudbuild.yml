@@ -1,0 +1,20 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "southamerica-west1-docker.pkg.dev/store-nestjs-ms-454717/image-registry/auth-ms",
+        "-f",
+        "dockerfile.prod",
+        "--platform=linux/amd64",
+        ".",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "southamerica-west1-docker.pkg.dev/store-nestjs-ms-454717/image-registry/auth-ms",
+      ]
+options:
+  logging: CLOUD_LOGGING_ONLY
